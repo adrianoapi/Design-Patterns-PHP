@@ -2,12 +2,10 @@
 
 class CalculadoraDeImpostos
 {
-    public function calculaICMS(Orcamento $orcamento)
+    public function calcula(Orcamento $orcamento, Imposto $imposto)
     {
-        return $orcamento->getValor() * 0.05;
+        return $imposto->calcula($orcamento);
+        
     }
     
-    public function calculaISS(Orcamento $orcamento){
-        return $orcamento->getValor() * 0.1;
-    }
 }
